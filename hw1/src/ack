@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int ackermann(int m,int n) {
+    if (m == 0) {
+        return n + 1;
+    } else if (n == 0) {
+        return ackermann(m - 1, 1);
+    } else {
+        return ackermann(m - 1, ackermann(m, n - 1));
+    }
+}
+
+int main() {
+    int m, n;                                   //宣告變數以利後續作輸入使用
+        cin >> m >> n;                          //輸入數值
+        cout << Ackerman(m, n) << endl;         //Ack函數計算並輸出
+    return 0;
+}
