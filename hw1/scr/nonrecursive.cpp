@@ -32,8 +32,11 @@ int ackermann_iterative(int m, int n) {
 
     return n;
 }
-
 int main() {
-    cout << "Ackermann Iterative(3, 2): " << ackermann_iterative(3, 2) << endl;
+    int m, n;
+    cout << "請輸入 m 和 n 的值: ";
+    cin >> m >> n;
+    int result = ackermann_iterative(m, n);  
+    cout << "ackermann_iterative(" << m << ", " << n << ") = " << result << endl;
     return 0;
 }
